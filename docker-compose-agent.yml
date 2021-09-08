@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  telegraf:
+    container_name: telegraf
+    image: telegraf
+    volumes:
+      - ./telegraf/config/telegraf.conf:/etc/telegraf/telegraf.conf
+networks: 
+  default: 
+    external: 
+      name: monitoring
